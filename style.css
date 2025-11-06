@@ -369,7 +369,8 @@ body {
   }
 
   .googleMaps {
-    display: none;
+    max-width: 80vw;
+    max-height: 25vh;
   }
 
 }
