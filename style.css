@@ -216,6 +216,10 @@ body {
   border-bottom: 2px solid #d15e12 !important;
 }
 
+.MobileScheduleFormContainer
+{
+  display: none;
+}
 .scheduleFormContainer {
   margin-left: -12px !important;
   background-color: #FAFAFA;
@@ -359,9 +363,14 @@ body {
   }
   
   /* --- Contact/Form Section --- */
+  #row2{
+    display: none;
+  }
   .scheduleFormContainer {
-      margin-left: 0 !important; /* Remove negative margin */
-      border: 0 !important;
+      display: none;
+  }
+  .MobileScheduleFormContainer{
+    display: flex;
   }
   .contactInfoParent{
     border: 0;
