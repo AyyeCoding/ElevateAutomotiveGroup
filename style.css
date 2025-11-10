@@ -54,7 +54,6 @@ body {
   text-align: center;
   display: flex;
   background-color: #9c9b9b0e;
-  border: 2px dashed #fafafa28;
   overflow: hidden;
 }
 
@@ -91,8 +90,6 @@ body {
   text-align: center;
   display: flex;
   background-color: #9c9b9b0e;
-  border: 2px dashed #fafafa28;
-  overflow: hidden;
 }
 
 .text-slider {
@@ -258,7 +255,9 @@ body {
   font-size: 25px;
   font-weight: 800;
 }
-
+.contactText a:hover{
+  color: white;
+}
 .contactInfoParent .firstItem {
   margin-top: 30px !important;
 }
@@ -314,7 +313,7 @@ body {
 !!! CSS FOR MOBILE !!!
 --------------------------------------------------
 */
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 
   /* --- Hero Section --- */
   .title {
