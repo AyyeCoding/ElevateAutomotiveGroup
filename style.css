@@ -366,11 +366,7 @@ body {
     display: none;
   }
   .scheduleFormContainer {
-      display: none;
-  }
-  .MobileScheduleFormContainer{
-    display: flex;
-    justify-content: center !important;
+      border: 0 !important;
   }
   .contactInfoParent{
     border: 0;
