@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const observer = new IntersectionObserver(callback, options);
 
     // Select all the elements you want to animate
-    const targets = document.querySelectorAll('.featurette, .gMapsText, .serviceContainer');
+    const targets = document.querySelectorAll('.featurette, .serviceContainer');
 
     // Start observing each target element
     targets.forEach(target => {
