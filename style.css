@@ -98,7 +98,7 @@ body {
   font-size: 150px;
   font-weight: 800;
   font-style: italic;
-  text-shadow: -10px 2px #0096c7;
+  text-shadow: -10px 2px #979dac;
   margin: 0;
   line-height: 1;
 }
@@ -122,7 +122,7 @@ body {
 }
 
 .navbar a:hover {
-  text-shadow: -2px 0px #0096c7;
+  text-shadow: -2px 0px #979dac;
 }
 
 .homeMoreInfoParent{
@@ -150,8 +150,8 @@ body {
 }
 
 .googleMaps {
-  border-left: 4px solid #0096c7 !important;
-  border-bottom: 3px solid #0674b4 !important;
+  border-left: 4px solid #979dac !important;
+  border-bottom: 3px solid #818692 !important;
       border-radius: 12px;
 }
 
@@ -183,8 +183,8 @@ body {
   width: 420px;
   border-radius: 50%;
   object-fit: cover !important;
-  border-left: 4px solid #0096c7;
-  border-bottom: 3px solid #0674b4;
+  border-left: 4px solid #979dac;
+  border-bottom: 3px solid #818692;
 }
 
 .featurette-heading {
@@ -204,7 +204,7 @@ body {
   font-style: bold;
   font-size: 45px;
   font-weight: 900px;
-  text-shadow: -3px -1px #0096c7;
+  text-shadow: -3px -1px #979dac;
 }
 
 .serviceContainer .fa-solid {
@@ -212,8 +212,8 @@ body {
 }
 
 .serviceContainer .card {
-  border-left: 3px solid #0096c7 !important;
-  border-bottom: 2px solid #0674b4 !important;
+  border-left: 3px solid #979dac !important;
+  border-bottom: 2px solid #818692 !important;
 }
 
 .MobileScheduleFormContainer
@@ -225,8 +225,8 @@ body {
   background-color: #FAFAFA;
   color: black;
   min-height: 100%;
-  border-right: 4px solid #0096c7 !important;
-  border-top: 3px solid #0674b4 !important;
+  border-right: 4px solid #979dac !important;
+  border-top: 3px solid #818692 !important;
   border-bottom: 4px solid black;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
@@ -241,7 +241,7 @@ body {
 
 .contactInfoParent {
   padding: 35px;
-  background: #0096c7;
+  background: #979dac;
   border-left: 4px solid black;
   border-bottom: 4px solid black;
   border-top: 3px solid rgb(61, 61, 61);
@@ -319,7 +319,7 @@ body {
   /* --- Hero Section --- */
   .title {
     font-size: 50px; /* Drastically reduce font size for phones */
-    text-shadow: -4px 1px #0096c7; /* Adjust shadow for smaller text */
+    text-shadow: -4px 1px #979dac; /* Adjust shadow for smaller text */
     line-height: 1.1;
   }
 
