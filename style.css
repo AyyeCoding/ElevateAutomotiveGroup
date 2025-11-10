@@ -213,10 +213,6 @@ body {
   border-bottom: 2px solid #818692 !important;
 }
 
-.MobileScheduleFormContainer
-{
-  display: none;
-}
 .scheduleFormContainer {
   margin-left: -12px !important;
   background-color: #FAFAFA;
@@ -367,6 +363,7 @@ body {
   }
   .scheduleFormContainer {
       border: 0 !important;
+      display: flex !important;
   }
   .contactInfoParent{
     border: 0;
