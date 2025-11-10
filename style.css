@@ -4,6 +4,11 @@ body {
   height: 100%;
   color: white;
   background-color: #FAFAFA;
+}a{
+  text-decoration: underline;
+  color: black;
+}a:hover{
+  color: #5c677d;
 }
 
 .navbar {
@@ -57,7 +62,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 40vh; 
-  margin-bottom: 10px;
+  margin-bottom: 50px;
   cursor: pointer;
   overflow: hidden;
   display: flex;
@@ -139,11 +144,14 @@ body {
   color: black;
   background-color: #FAFAFA;
 }
-
 .homeMoreInfo2 .row {
-  padding-bottom: 150px;
+  padding-bottom: 170px;
 }
-
+.gMapsText{
+  display: flex;
+  align-items: center;     /* This centers vertically */
+  justify-content: center; /* This centers horizontally */
+}
 .googleMaps {
   border-left: 4px solid #5c677d !important;
   border-bottom: 3px solid #818692 !important;
@@ -332,7 +340,7 @@ body {
   }
 
   .homeMoreInfo2 .row {
-    padding-bottom: 80px; 
+    padding-bottom: 120px; 
   }
   
   .coverDiv {
@@ -365,6 +373,7 @@ body {
   }
   .MobileScheduleFormContainer{
     display: flex;
+    justify-content: center !important;
   }
   .contactInfoParent{
     border: 0;
