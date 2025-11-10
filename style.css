@@ -363,7 +363,6 @@ body {
   }
   .scheduleFormContainer {
       border: 0 !important;
-      display: flex !important;
   }
   .contactInfoParent{
     border: 0;
