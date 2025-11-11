@@ -35,7 +35,7 @@
    <meta name="twitter:image" content="https://elevateautomotivegroup.com/images/icons/EaG_CompanyLogoPNG.png">
 
    <!-- Favicon -->
-   <link rel="icon" href="EaG_CompanyIcon_V2-Upscaled.webp">
+   <link rel="icon" href="images/icons/EaG_CompanyIcon_Compressed.webp">
 
    <!-- Preload Key Assets -->
    <link rel="preload" as="image" href="images/cover2.jpg">
@@ -61,7 +61,7 @@
     "@context": "https://schema.org",
     "@type": "AutoRepair",
     "name": "Elevate Automotive Group",
-    "image": "https://elevateautomotivegroup.com/EaG_CompanyIcon_V2-Upscaled.webp",
+    "image": "https://elevateautomotivegroup.com/images/icons/EaG_CompanyIcon_Compressed.webp",
     "@id": "https://elevateautomotivegroup.com/",
     "url": "https://elevateautomotivegroup.com/",
     "telephone": "+17193222549",
@@ -89,7 +89,14 @@
 
 <body>
    <div class="container-fluid coverDiv">
-      <img src="images/cover2.jpg" alt="BMW Home Cover Image" class="homeCoverImage">
+      <picture>
+         <source srcset="images/cover2.jpg" media="(min-width: 2561px)">
+         <source srcset="images/cover2_2560px.jpg" media="(min-width: 1921px)">
+         <source srcset="images/cover2_1920px.jpg" media="(min-width: 721px)">
+         <source srcset="images/cover2_720px.jpg" media="(max-width: 720px)">
+         <img src="images/cover2.jpg" alt="BMW Home Cover Image" class="homeCoverImage" fetchpriority="high"
+            loading="eager" decoding="async">
+      </picture>
       <div class="homeCoverImageOverlay">
          <div class="text-slider">
             <p class="title">Elevate Automotive Group</p>
@@ -100,7 +107,7 @@
    <div class="container-fluid homeMoreInfoParent">
       <div class="container homeMoreInfo">
          <div class="row featurette">
-            <div class="col-xl-7">
+            <div class="col-lg-7">
                <h2 class="featurette-heading">Dealership quality,<span class="text-muted"> without the dealership
                      hassle.</span>
                </h2>
@@ -113,13 +120,13 @@
                   clear explanations, and receive fair, transparent quotes before any work begins.
                </p>
             </div>
-            <div class="col-xl-5">
-               <img class="featurette-image img-fluid mx-auto" src="images/Chevy-camaro-ss-engine-v8.avif"
+            <div class="col-lg-5">
+               <img class="featurette-image img-fluid mx-auto" src="images/feature-images/chevy-v8-engine.jpg"
                   alt="V8 Chevy Engine">
             </div>
          </div>
          <div class="row featurette">
-            <div class="col-xl-7 order-xl-2">
+            <div class="col-lg-7 order-lg-2">
                <h2 class="featurette-heading">Meet Christian,<span class="text-muted"> your ASE Certified
                      Mechanic</span>
                </h2>
@@ -132,12 +139,12 @@
                   treat every car like it's his own and every customer like a neighbor.
                </p>
             </div>
-            <div class="col-xl-5 order-xl-1">
-               <img class="featurette-image img-fluid mx-auto" src="images/avie.PNG" alt="Picture of Business Owner">
+            <div class="col-lg-5 order-lg-1">
+               <img class="featurette-image img-fluid mx-auto" src="images/feature-images/avie.PNG" alt="Picture of Business Owner">
             </div>
          </div>
          <div class="row featurette">
-            <div class="col-xl-7">
+            <div class="col-lg-7">
                <h2 class="featurette-heading">Premium service<span class="text-muted"> has never been so
                      affordable</span>
                </h2>
@@ -149,15 +156,22 @@
                   needs at a price that makes sense.
                </p>
             </div>
-            <div class="col-xl-5">
-               <img class="featurette-image img-fluid mx-auto" src="images/wheel-close-up.avif"
-                  alt="Up Close Photo of Auto-Wheel">
+            <div class="col-lg-5">
+               <img class="featurette-image img-fluid mx-auto" src="images/feature-images/RTXrspec-wheel.jpg"
+                  alt="Up Close Photo of RTX R-Spec Wheel">
             </div>
          </div>
       </div>
    </div>
    <div class="container-fluid coverDiv2">
-      <img src="images/csprings.jpg" alt="homeImage" class="homeCoverImage2">
+      <picture>
+         <source srcset="images/csprings.jpg" media="(min-width: 2561px)">
+         <source srcset="images/csprings_2560px.jpg" media="(min-width: 1921px)">
+         <source srcset="images/csprings_1920px.jpg" media="(min-width: 721px)">
+         <source srcset="images/csprings_720px.jpg" media="(max-width: 720px)">
+         <img src="images/csprings.jpg" alt="homeImage" class="homeCoverImage2" loading="lazy" decoding="async">
+      </picture>
+
       <div class="homeCoverImageOverlay2">
          <div class="text-slider">
             <p class="title">Colorado Springs</p>
@@ -166,7 +180,7 @@
    </div>
    <div class="container homeMoreInfo2">
       <div class="row gMapsText">
-         <div class="col-xl-9">
+         <div class="col-lg-9">
             <h2>Located In Lorson Ranch<span class="text-muted">, Colorado Springs</span></h2>
             <p class="lead">Elevate Automotive Group is located 15 minutes away from Colorado Springs Airport, right off
                Grand Mountain School and Fontaine Blvd. We offer a full range of
@@ -178,7 +192,7 @@
                </span>
             </p>
          </div>
-         <!-- <div class="col-xl-7"> MAPS TEMPORARARILY EMOVED.
+         <!-- <div class="col-lg-7"> MAPS TEMPORARARILY EMOVED.
                <iframe width="700" height="500" allowfullscreen="" loading=" lazy" class="googleMaps"
                   referrerpolicy="no-referrer-when-downgrade"
                   src="https://maps.google.com/maps?q=38.834127663399855,-104.8222927222884&hl=en&z=15&amp;output=embed">
@@ -186,9 +200,10 @@
             </div> -->
       </div>
    </div>
-   <nav class="navbar fixed-bottom navbar-expand-sm">
+   <nav class="navbar fixed-bottom navbar-expand-lg">
       <a class="navbar-brand" href="index.html">
-         <img src="EaG_CompanyIcon_V2-Upscaled.webp" alt="Company Icon - Sports Car Emblem" style="max-height: 100px;" class="EaGNavLogo">
+         <img src="images/icons/EaG_CompanyIcon_Compressed.webp" alt="Company Icon - Sports Car Emblem"
+            style="max-height: 100px;" class="EaGNavLogo">Elevate Automotive Group
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"        
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -203,13 +218,13 @@
                <a class="nav-link" href="services.html">Services</a>
             </li>
             <li class="nav-item">
-               <a class="nav-link bookNowText" href="contact.html">Request Now</a>
+               <a class="nav-link bookNowText" href="contact.html">Booking</a>
             </li>
             <li class="nav-item">
                <a class="nav-link " href="tel:+17193222549"><i class="fa-solid fa-phone fa-xs"></i> (719) 322-2549</a>
             </li>
          </ul>
-         <ul class="navbar-nav flex-row gap-3">
+         <!-- <ul class="navbar-nav flex-row gap-3">
             <li class="nav-item">
                <a class="nav-link" href="#" target="_blank" aria-label="Instagram">
                   <i class="fab fa-instagram"></i>
@@ -220,7 +235,7 @@
                   <i class="fab fa-twitter"></i>
                </a>
             </li>
-         </ul>
+         </ul> -->
       </div>
    </nav>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
