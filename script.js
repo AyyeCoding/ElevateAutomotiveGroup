@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Options for the Intersection Observer
     const options = {
         root: null, // uses the viewport as the bounding box
         rootMargin: '0px',
@@ -20,14 +19,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     };
 
-    // Create the observer
     const observer = new IntersectionObserver(callback, options);
 
     // Select all the elements you want to animate
     const targets = document.querySelectorAll('.featurette, .serviceContainer');
 
-    // Start observing each target element
     targets.forEach(target => {
         observer.observe(target);
     });
+
+    // Use Apple Maps for Apple ecosystem users, and Google Maps for everyone else.
+    var mapLink = document.getElementById("map-link");
+    if (mapLink) {
+        // Check if the user is on an Apple mobile device
+        var isIOS = /iPad|iPhone|Macintosh/.test(navigator.userAgent);
+        if (isIOS) {
+            // If iOS, set the link to use Apple Maps
+            mapLink.href = "http://maps.apple.com/?q=11036+Rockcastle+Dr,+Colorado+Springs,+CO+80925";
+        } else {
+            // For all other devices, set the link to use Google Maps
+            mapLink.href = "https://maps.app.goo.gl/tajKUgeH9gJGsEUn7";
+        }
+    }
 });
