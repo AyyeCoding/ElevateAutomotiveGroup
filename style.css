@@ -338,11 +338,11 @@ a:hover {
 @media (max-width: 1000px) {
 
   body, html, .serviceContainer, .scheduleFormContainer, .homeMoreInfo, .homeMoreInfo .lead, .homeMoreInfo2 .lead{
-    font-size: 12px !important;
+    font-size: 16px !important;
   }
 
   .contactItem h2, .contactInfoParent h2, .navbar{
-    font-size: 14px !important;
+    font-size: 18px !important;
   }
 
   .serviceContainer h2, .featurette-heading{
