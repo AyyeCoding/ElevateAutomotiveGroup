@@ -4,10 +4,14 @@ body {
   height: 100%;
   color: white;
   background-color: #FAFAFA;
-}a{
+}
+
+a {
   text-decoration: underline;
   color: black;
-}a:hover{
+}
+
+a:hover {
   color: #5c677d;
 }
 
@@ -60,14 +64,17 @@ body {
 .coverDiv2 {
   position: relative;
   width: 100%;
-  min-height: 40vh; 
+  min-height: 40vh;
   margin-bottom: 50px;
   cursor: pointer;
   overflow: hidden;
   display: flex;
-  align-items: center;     /* This centers vertically */
-  justify-content: center; /* This centers horizontally */
+  align-items: center;
+  /* This centers vertically */
+  justify-content: center;
+  /* This centers horizontally */
 }
+
 .homeCoverImage2 {
   position: absolute;
   top: 0;
@@ -135,42 +142,49 @@ body {
   color: black;
   background-color: #FAFAFA;
 }
+
 .homeMoreInfo2 {
   max-height: 100vh;
   color: black;
   background-color: #FAFAFA;
 }
+
 .homeMoreInfo2 .row {
   padding-bottom: 170px;
 }
-.gMapsText{
+
+.gMapsText {
   display: flex;
-  align-items: center;     /* This centers vertically */
-  justify-content: center; /* This centers horizontally */
+  align-items: center;
+  /* This centers vertically */
+  justify-content: center;
+  /* This centers horizontally */
 }
+
 .googleMaps {
   border-left: 4px solid #5c677d !important;
   border-bottom: 3px solid #818692 !important;
-      border-radius: 12px;
+  border-radius: 12px;
 }
 
-.serviceContainer .row{
+.serviceContainer .row {
   padding-bottom: 150px !important;
 }
+
 .serviceContainer h2 {
   text-align: center;
   padding: 15px;
 }
 
 .featurette,
-.serviceContainer{
+.serviceContainer {
   opacity: 0;
   transform: translateY(100px);
   transition: opacity 2.0s ease-out, transform 2.0s ease-out;
 }
 
 .featurette.visible,
-.serviceContainer.visible{
+.serviceContainer.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -226,11 +240,12 @@ body {
   border-bottom-right-radius: 12px;
   padding: 25px;
 }
-.scheduleFormContainer iframe{
+
+.scheduleFormContainer iframe {
   height: 1000px !important;
 }
 
-.contactContainer{  
+.contactContainer {
   padding: 25px;
 }
 
@@ -247,16 +262,19 @@ body {
 }
 
 
-#row2{
+#row2 {
   height: 10vh;
 }
+
 .contactInfoParent h2 {
   font-size: 25px;
   font-weight: 800;
 }
-.contactText a:hover{
+
+.contactText a:hover {
   color: white;
 }
+
 .contactInfoParent .firstItem {
   margin-top: 30px !important;
 }
@@ -270,17 +288,22 @@ body {
   font-weight: 600;
 }
 
-.contactItem{
+.contactItem {
   text-align: center;
 }
+
 .scanFromPhone {
   height: 175px;
   width: 175px;
   border-radius: 12px;
-}.scanFromPhoneParent a{
+}
+
+.scanFromPhoneParent a {
   text-decoration: underline !important;
   color: white !important;
-}.scanFromPhoneParent a:hover{
+}
+
+.scanFromPhoneParent a:hover {
   text-decoration: underline !important;
   color: black !important;
 }
@@ -314,64 +337,82 @@ body {
 */
 @media (max-width: 1000px) {
 
-  /* --- Hero Section --- */
+  body, html, .serviceContainer, .scheduleFormContainer, .homeMoreInfo, .homeMoreInfo .lead, .homeMoreInfo2 .lead{
+    font-size: 12px !important;
+  }
+
+  .contactItem h2, .contactInfoParent h2, .navbar{
+    font-size: 14px !important;
+  }
+
+  .serviceContainer h2, .featurette-heading{
+    font-size: 24px !important;
+  }
+
   .title {
-    font-size: 4em; /* Drastically reduce font size for phones */
-    text-shadow: -4px 1px #5c677d; /* Adjust shadow for smaller text */
+    font-size: 3em;
+    text-shadow: -4px 1px #5c677d;
     line-height: 1.1;
   }
 
   .subtitle {
-    font-size: 26px; /* Reduce subtitle font size */
+    font-size: 18px;
   }
-
-  /* --- Layout & Spacing --- */
+ .navbar .navbar-brand {
+    font-size: 12px;
+  }
   .navbar {
-    height: auto; /* Allow navbar height to be flexible */
+    height: auto;
     padding: 15px;
   }
 
-  .homeMoreInfo{
+  .homeMoreInfo {
     overflow: hidden;
   }
 
   .homeMoreInfo2 .row {
-    padding-bottom: 120px; 
+    padding-bottom: 120px;
   }
-  
+
   .coverDiv {
-      height: 90vh; /* Slightly reduce hero height to hint at content below */
+    height: 90vh;
   }
-  
-  /* --- Featurette Section (for stacked columns) --- */
+
   .featurette {
-    text-align: center; /* Center-align text when columns stack */
+    text-align: center;
   }
 
   .featurette-image {
-    width: 280px; /* Make image smaller for mobile */
+    width: 280px;
     height: 280px;
-    margin: 0 auto 2rem auto; /* Center image and add space below */
-    object-fit:cover !important;
+    margin: 0 auto 2rem auto;
+    object-fit: cover !important;
   }
 
   .featurette-heading {
-    font-size: 38px; /* Adjust heading size */
-    margin-top: 1rem; /* Override larger margin-top from desktop styles */
+    font-size: 38px;
+    margin-top: 1rem;
   }
-  
-  /* --- Contact/Form Section --- */
-  #row2{
+
+  #row2 {
     display: none;
   }
+
   .scheduleFormContainer {
-      border: 0 !important;
+    border: 0 !important;
   }
-  .scheduleFormContainer iframe{
+
+  .scheduleFormContainer iframe {
     height: 1500px !important;
   }
-  .contactInfoParent{
+
+  .contactInfoParent {
     border: 0;
+    border-radius: 12px;
+  }
+  .scanFromPhone{
+    height: 125px;
+    width: 125px;
     border-radius: 12px;
   }
 
@@ -380,7 +421,7 @@ body {
     max-height: 25vh;
   }
 
-  .EaGNavLogo{
+  .EaGNavLogo {
     max-height: 60px !important;
   }
 
