@@ -135,7 +135,6 @@ body {
   color: black;
   background-color: #FAFAFA;
 }
-
 .homeMoreInfo2 {
   max-height: 100vh;
   color: black;
@@ -177,12 +176,14 @@ body {
 }
 
 .featurette-image {
-  height: 420px;
-  width: 420px;
+  max-height: 420px;
+  max-width: 420px;
   border-radius: 50%;
   object-fit: cover !important;
   border-left: 4px solid #5c677d;
   border-bottom: 3px solid #818692;
+  display: flex !important;
+  justify-content: center !important;
 }
 
 .featurette-heading {
