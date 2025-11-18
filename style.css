@@ -1,9 +1,59 @@
-html,
+/* tutorial: https://www.youtube.com/watch?v=wARbgs5Fmuw */
+/* This allows responsive font scaling to be easily manipulated with a default set (mobile) and one Desktop scaling w/ Media query. */
+:root {
+  --ff-body: "Geist", sans-serif;
+
+  /* Recommended Clamp: 
+     Start at 3rem minimum.
+     Grow by 6% of the screen width (6vw).
+     Cap at 8rem maximum.
+  */
+  --fs-xl: clamp(3rem, 6vw + 1rem, 8rem);
+  --fs-lg: 2.2rem;
+  --fs-md: 1.55rem;
+  --fs-sm: 1.2rem;
+  --fs-xs: 1.0rem;
+}
+
+/* DESKTOP SCALING (Min width 40em) */
+@media (min-width: 60em) {
+  :root {
+    /* Desktop Clamp: 
+       Slightly larger minimum for desktop screens 
+    */
+    --fs-xl: clamp(5rem, 8vw + 1rem, 10rem);
+    --fs-lg: 3.0rem;
+    --fs-md: 2.0rem;
+    --fs-sm: 1.4rem;
+    --fs-xs: 1.2rem;
+  }
+}
+
+html{
+  /* allows users who have set their browser default to "Large Text" (visually impaired users, etc) to still have the site scale relative to their preference. 
+     Don't set a hard value (ex. 12px). I use rem to scale font-modulary and allow full use for accessability users.  */
+  font-size: 90%; 
+}
 body {
-  font-family: "Varela", sans-serif;
-  height: 100%;
+  font-size: var(--fs-sm);
+  font-family: "Geist";
+  min-height: 100vh;
+  min-height: 100svh;
   color: white;
   background-color: #FAFAFA;
+}
+
+h1 {
+  font-size: var(--fs-xl);
+}
+
+h2, .featurette-heading{
+  font-size: var(--fs-lg);
+  font-weight: 600 !important;
+}
+
+h3 {
+  font-size: var(--fs-md);
 }
 
 a {
@@ -31,9 +81,13 @@ a:hover {
   position: relative;
   text-align: center;
   width: 100%;
-  height: 91vh;
+  min-height: 91vh;
+  min-height: 91svh;
   cursor: pointer;
   overflow: hidden;
+  align-items: center !important;
+  justify-content: center !important;
+  display: flex;
 }
 
 .homeCoverImage {
@@ -51,31 +105,20 @@ a:hover {
   position: relative;
   z-index: 2;
   color: white;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  background-color: #9c9b9b0e;
-  overflow: hidden;
 }
 
 .coverDiv2 {
   position: relative;
   width: 100%;
   min-height: 40vh;
+  min-height: 40svh;
   margin-bottom: 50px;
   cursor: pointer;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  /* This centers vertically */
-  justify-content: center;
-  /* This centers horizontally */
-}
-
-.homeCoverImage2 {
+  display: flex; /* flex to allow vert/horizontal centering */
+  align-items: center; /* vertical centering */ 
+  justify-content: center; /* horizontal centering */
+}.homeCoverImage2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -84,9 +127,7 @@ a:hover {
   object-fit: cover;
   z-index: 1;
   transition: transform 2.0s ease-in-out;
-}
-
-.homeCoverImageOverlay2 {
+}.homeCoverImageOverlay2 {
   position: relative;
   z-index: 2;
   color: white;
@@ -102,20 +143,15 @@ a:hover {
 .text-slider {
   text-align: center;
   transition: transform 0.4s ease-in-out;
-}
-
-.title {
-  font-size: 140px;
+}.title {
+  font-size: var(--fs-xl);
   font-weight: 800;
   font-style: italic;
-  text-shadow: -10px 2px #5c677d;
+  text-shadow: -7px 2px #5c677d;
   margin: 0;
   line-height: 1;
-}
-
-.subtitle {
-  font-size: 70px;
-  /* ADDED: Style for the smaller, secondary text -- BUT NOT IN USE CURRENTLY. */
+}.subtitle {
+  font-size: var(--fs-lg);
   font-weight: 400;
   text-transform: uppercase;
   text-shadow: -3px 2px #5F5E63;
@@ -125,9 +161,7 @@ a:hover {
 .coverDiv:hover .homeCoverImage,
 .coverDiv2:hover .homeCoverImage2 {
   transform: scale(1.1);
-}
-
-.coverDiv:hover .text-slider {
+}.coverDiv:hover .text-slider {
   transform: translateY(-5%);
 }
 
@@ -136,54 +170,27 @@ a:hover {
 }
 
 .homeMoreInfo {
-  min-height: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
   padding: 25px;
   border-radius: 12px;
   color: black;
   background-color: #FAFAFA;
-}
-
-.homeMoreInfo2 {
-  max-height: 100vh;
+}.homeMoreInfo2 {
+  padding: 25px;
+  min-height: 10vh;
+  min-height: 10svh;
   color: black;
   background-color: #FAFAFA;
-}
-
-.homeMoreInfo2 .row {
+}.homeMoreInfo2 .row {
   padding-bottom: 170px;
 }
-
-.gMapsText {
-  display: flex;
-  align-items: center;
-  /* This centers vertically */
-  justify-content: center;
-  /* This centers horizontally */
-}
-
-.googleMaps {
-  border-left: 4px solid #5c677d !important;
-  border-bottom: 3px solid #818692 !important;
-  border-radius: 12px;
-}
-
-.serviceContainer .row {
-  padding-bottom: 150px !important;
-}
-
-.serviceContainer h2 {
-  text-align: center;
-  padding: 15px;
-}
-
 .featurette,
 .serviceContainer {
   opacity: 0;
   transform: translateY(100px);
-  transition: opacity 2.0s ease-out, transform 2.0s ease-out;
-}
-
-.featurette.visible,
+  transition: opacity 2.0s ease-out, transform 0.6s ease-out;
+}.featurette.visible,
 .serviceContainer.visible {
   opacity: 1;
   transform: translateY(0);
@@ -198,32 +205,46 @@ a:hover {
   border-bottom: 3px solid #818692;
   display: flex !important;
   justify-content: center !important;
-}
-
-.featurette-heading {
+}.featurette-heading {
   font-weight: 300;
   line-height: 1;
   letter-spacing: -.05rem;
 }
 
+.gMapsText {
+  display: flex;
+  align-items: center;
+  /* This centers vertically */
+  justify-content: center;
+  /* This centers horizontally */
+}.googleMaps {
+  border-left: 4px solid #5c677d !important;
+  border-bottom: 3px solid #818692 !important;
+  border-radius: 12px;
+}
+
+
+
+
 .serviceContainer {
   color: black;
   padding: 25px;
-  font-size: 18px;
+  /* UPDATED: switched to variable */
+  font-size: var(--fs-sm); 
   max-height: 100%;
 }
-
-.serviceContainer h2 {
+.serviceContainer .row {
+  padding-bottom: 150px !important;
+}.serviceContainer h2 {
   font-style: bold;
-  font-size: 45px;
+  /* UPDATED: switched to variable */
+  font-size: var(--fs-lg);
   font-weight: 900px;
-}
-
-.serviceContainer .fa-solid {
+  text-align: center;
+  padding: 15px;
+}.serviceContainer .fa-solid {
   color: black;
-}
-
-.serviceContainer .card {
+}.serviceContainer .card {
   border-left: 3px solid #5c677d !important;
   border-bottom: 2px solid #818692 !important;
 }
@@ -239,18 +260,13 @@ a:hover {
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
   padding: 25px;
-}
-
-.scheduleFormContainer iframe {
+}.scheduleFormContainer iframe {
   height: 1000px !important;
 }
 
 .contactContainer {
   padding: 25px;
-}
-
-
-.contactInfoParent {
+}.contactInfoParent {
   padding: 35px;
   background: #5c677d;
   border-left: 4px solid black;
@@ -267,7 +283,8 @@ a:hover {
 }
 
 .contactInfoParent h2 {
-  font-size: 25px;
+  /* UPDATED: switched to variable */
+  font-size: var(--fs-md);
   font-weight: 800;
 }
 
@@ -284,7 +301,8 @@ a:hover {
 }
 
 .contactItem h2 {
-  font-size: 15px;
+  /* UPDATED: switched to variable */
+  font-size: var(--fs-sm);
   font-weight: 600;
 }
 
@@ -314,12 +332,14 @@ a:hover {
   /* Bump up size of carousel content */
   .carousel-caption p {
     margin-bottom: 1.25rem;
-    font-size: 1.25rem;
+    /* UPDATED */
+    font-size: var(--fs-sm);
     line-height: 1.4;
   }
 
   .featurette-heading {
-    font-size: 50px;
+    /* UPDATED */
+    font-size: var(--fs-lg);
   }
 }
 
@@ -335,22 +355,11 @@ a:hover {
 !!! CSS FOR MOBILE !!!
 --------------------------------------------------
 */
-@media (max-width: 1000px) {
-
-  body, html, .serviceContainer, .scheduleFormContainer, .homeMoreInfo, .homeMoreInfo .lead, .homeMoreInfo2 .lead{
-    font-size: 16px !important;
-  }
-
-  .contactItem h2, .contactInfoParent h2, .navbar{
-    font-size: 18px !important;
-  }
-
-  .serviceContainer h2, .featurette-heading{
-    font-size: 24px !important;
-  }
+@media (max-width: 63em) {
+  
 
   .title {
-    font-size: 3em;
+    font-size: var(--fs-lg);
     text-shadow: -4px 1px #5c677d;
     line-height: 1.1;
   }
@@ -359,9 +368,10 @@ a:hover {
     font-size: 18px;
   }
  .navbar .navbar-brand {
-    font-size: 12px;
+    font-size: 13px;
   }
   .navbar {
+    font-size: 14px !important;
     height: auto;
     padding: 15px;
   }
@@ -390,7 +400,7 @@ a:hover {
   }
 
   .featurette-heading {
-    font-size: 38px;
+     /* font-size: 38px; <-- DISABLED to use variables */
     margin-top: 1rem;
   }
 
