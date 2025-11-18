@@ -185,15 +185,22 @@ a:hover {
 }.homeMoreInfo2 .row {
   padding-bottom: 170px;
 }
+/* 1. DEFAULT STATE: Visible is a MUST (Safe Fallback for error 500 of script.js) */
 .featurette,
 .serviceContainer {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 2.0s ease-out, transform 0.6s ease-out;
-}.featurette.visible,
-.serviceContainer.visible {
   opacity: 1;
   transform: translateY(0);
+  transition: opacity 2.0s ease-out, transform 0.6s ease-out;
+}
+
+/* 2. HIDDEN & ANIMATION STATE: Only applied IF script.js is able to run */
+.js-hidden {
+  opacity: 0 !important;
+  transform: translateY(100px) !important;
+}.featurette.visible,
+.serviceContainer.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 .featurette-image {

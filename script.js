@@ -1,19 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    // 1. Select elements FIRST
+    const targets = document.querySelectorAll('.featurette, .serviceContainer');
+
+    // 2. IMMEDIATE HIDE: Apply the hiding class via JS
+    // If script fails, this never runs, and CSS keeps them visible.
+    targets.forEach(target => {
+        target.classList.add('js-hidden');
+    });
+
     const options = {
-        root: null, // uses the viewport as the bounding box
+        root: null, 
         rootMargin: '0px',
-        threshold: 0.12 // trigger when 10% of the element is visible
+        threshold: 0.12 
     };
 
-    // The callback function that runs when an element is observed
     const callback = (entries, observer) => {
         entries.forEach(entry => {
-            // If the element is intersecting the viewport
             if (entry.isIntersecting) {
-                // Add the 'visible' class to trigger the animation
+                // 3. SWAP CLASSES: Remove hidden, add visible
+                entry.target.classList.remove('js-hidden');
                 entry.target.classList.add('visible');
 
-                // Stop observing the element so the animation doesn't re-trigger
                 observer.unobserve(entry.target);
             }
         });
@@ -21,14 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const observer = new IntersectionObserver(callback, options);
 
-    // Select all the elements you want to animate
-    const targets = document.querySelectorAll('.featurette, .serviceContainer');
-
     targets.forEach(target => {
         observer.observe(target);
     });
 
-    // Use Apple Maps for Apple ecosystem users, and Google Maps for everyone else.
+    // --- Map Logic (Unchanged) ---
     var mapLink = document.getElementById("map-link");
     if (mapLink) {
         // Check if the user is on an Apple mobile device
