@@ -12,7 +12,7 @@
   --fs-lg: 2.2rem;
   --fs-md: 1.55rem;
   --fs-sm: 1.2rem;
-  --fs-xs: 1.0rem;
+  --fs-xs: 0.6rem;
 }
 
 /* DESKTOP SCALING (Min width 40em) */
@@ -25,7 +25,7 @@
     --fs-lg: 3.0rem;
     --fs-md: 2.0rem;
     --fs-sm: 1.4rem;
-    --fs-xs: 1.2rem;
+    --fs-xs: 0.8rem;
   }
 }
 
@@ -442,4 +442,17 @@ a:hover {
     max-height: 60px !important;
   }
 
+  footer{
+  height: auto !important;
+  padding-bottom: 200px !important;}
+
+}
+
+footer{
+  height: auto !important;
+  padding-bottom: 130px !important;
+  color: black !important;
+}.footer-text{
+  color: #5c677d;
+  font-size: var( --fs-xs) !important;
 }
